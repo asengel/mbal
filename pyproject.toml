@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mbal"
+version = "0.3.1"
+description = "Generalized reservoir material-balance modelling and history matching"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7", "PyYAML>=6.0"]
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+test = ["pytest>=7.4", "hypothesis>=6.0"]
+dev = ["pytest>=7.4", "hypothesis>=6.0", "ruff>=0.4", "mypy>=1.8", "types-PyYAML"]
+
+[project.scripts]
+mbal = "mbal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: full history-match runs of the bundled examples"]
+
+[tool.ruff]
+line-length = 132
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["B905"]   # zip(strict=...) is noise for equal-length engineering arrays
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+check_untyped_defs = true

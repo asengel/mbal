@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "initial_rmse_psia": 1178.2412561786632,
+  "rmse_psia": 6.614574335905815e-07,
+  "weighted_rmse": 2.6458297343623264e-08,
+  "improvement_percent": 99.9999999438606,
+  "nfev": 9,
+  "message": "`xtol` termination condition is satisfied.",
+  "warnings": [],
+  "parameter_correlation": {},
+  "parameter_uncertainty": {
+    "reservoir.G_scf": {
+      "sigma_transformed": 3.8536925957932644e-11,
+      "transform": "log",
+      "lower_1sigma": 69479999994.5935,
+      "upper_1sigma": 69479999999.94852
+    }
+  },
+  "initial_parameters": {
+    "reservoir.G_scf": 100000000000.0
+  },
+  "matched_parameters": {
+    "reservoir.G_scf": 69479999997.27101
+  },
+  "parameter_changes": {
+    "reservoir.G_scf": {
+      "initial": 100000000000.0,
+      "matched": 69479999997.27101,
+      "ratio": 0.6947999999727101,
+      "change_percent": -30.520000002728988
+    }
+  },
+  "failed_trials": []
+}

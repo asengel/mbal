@@ -1,0 +1,28 @@
+project:
+  name: Walsh-Lake wet-gas depletion
+reservoir:
+  type: wet_gas
+  Pi_psia: 10300
+  G_scf: 100000000000.0
+  Swi: 0.2
+  cf_1psi: 3.0e-06
+  cw_1psi: 2.0e-06
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: none
+solver:
+  min_pressure_psia: 200
+  max_pressure_psia: 12000
+history_match:
+  pressure_sigma_psia: 25
+  loss: linear
+  parameters:
+    reservoir.G_scf:
+    - 30000000000.0
+    - 120000000000.0

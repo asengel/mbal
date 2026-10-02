@@ -1,0 +1,336 @@
+[
+  {
+    "case": "dry_gas",
+    "success": true,
+    "initial_rmse_psia": 216.14035580073286,
+    "rmse_psia": 4.63485378861594,
+    "weighted_rmse": 0.926970757723188,
+    "improvement_percent": 97.85562776028326,
+    "nfev": 7,
+    "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.G_scf": {
+        "sigma_transformed": 0.00812783141442303,
+        "transform": "log",
+        "lower_1sigma": 13768239958.082058,
+        "upper_1sigma": 13993880826.814903
+      }
+    },
+    "initial_parameters": {
+      "reservoir.G_scf": 8000000000.0
+    },
+    "matched_parameters": {
+      "reservoir.G_scf": 13880601902.237213
+    },
+    "parameter_changes": {
+      "reservoir.G_scf": {
+        "initial": 8000000000.0,
+        "matched": 13880601902.237213,
+        "ratio": 1.7350752377796517,
+        "change_percent": 73.50752377796516
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": []
+  },
+  {
+    "case": "gas_condensate_lean",
+    "success": true,
+    "initial_rmse_psia": 850.8339663581021,
+    "rmse_psia": 47.58526126806539,
+    "weighted_rmse": 2.379263063403269,
+    "improvement_percent": 94.40722125002264,
+    "nfev": 7,
+    "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.G_scf": {
+        "sigma_transformed": 0.005106292308056924,
+        "transform": "log",
+        "lower_1sigma": 9945004280.217203,
+        "upper_1sigma": 10047088864.40641
+      }
+    },
+    "initial_parameters": {
+      "reservoir.G_scf": 15000000000.0
+    },
+    "matched_parameters": {
+      "reservoir.G_scf": 9995916254.163214
+    },
+    "parameter_changes": {
+      "reservoir.G_scf": {
+        "initial": 15000000000.0,
+        "matched": 9995916254.163214,
+        "ratio": 0.6663944169442142,
+        "change_percent": -33.36055830557858
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [1000, 8000] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "gas_condensate_rich",
+    "success": true,
+    "initial_rmse_psia": 728.5382795687389,
+    "rmse_psia": 18.156828225469575,
+    "weighted_rmse": 0.9078414112734788,
+    "improvement_percent": 97.50777292907415,
+    "nfev": 10,
+    "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "warnings": [
+      "1 trial(s) failed with a material-balance error (see failed_trials)"
+    ],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.G_scf": {
+        "sigma_transformed": 0.002731001569376003,
+        "transform": "log",
+        "lower_1sigma": 9955724852.184189,
+        "upper_1sigma": 10010251830.277407
+      }
+    },
+    "initial_parameters": {
+      "reservoir.G_scf": 16000000000.0
+    },
+    "matched_parameters": {
+      "reservoir.G_scf": 9982951112.93825
+    },
+    "parameter_changes": {
+      "reservoir.G_scf": {
+        "initial": 16000000000.0,
+        "matched": 9982951112.93825,
+        "ratio": 0.6239344445586406,
+        "change_percent": -37.606555544135944
+      }
+    },
+    "failed_trials": [
+      {
+        "parameters": {
+          "reservoir.G_scf": 10426264129.884293
+        },
+        "error": "No pressure between 500 and 6800 psia closes the material balance at t=1095 days; sign changes at 5430 psia (relative residual 5.59e-03), 5430 psia (relative residual 5.59e-03), 5430 psia (relative residual 5.59e-03) are discontinuities, not roots. Check the PVT table for jumps or 1 - Rs*Rv approaching zero, or narrow solver.min/max_pressure_psia."
+      }
+    ],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [800, 5800] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "oil_gas_cap",
+    "success": true,
+    "initial_rmse_psia": 276.95374745947225,
+    "rmse_psia": 4.145552285239935,
+    "weighted_rmse": 0.20727761426199673,
+    "improvement_percent": 98.50316079010753,
+    "nfev": 13,
+    "message": "`ftol` termination condition is satisfied.",
+    "warnings": [
+      "Strong fitted-parameter correlation: reservoir.N_stb / reservoir.m (-1.000). The pressure match may not uniquely identify these parameters."
+    ],
+    "parameter_correlation": {
+      "reservoir.N_stb": {
+        "reservoir.N_stb": 1.0,
+        "reservoir.m": -0.9998883003918492
+      },
+      "reservoir.m": {
+        "reservoir.N_stb": -0.9998883003918491,
+        "reservoir.m": 1.0
+      }
+    },
+    "parameter_uncertainty": {
+      "reservoir.N_stb": {
+        "sigma_transformed": 0.2536685737676958,
+        "transform": "log",
+        "lower_1sigma": 83483564.34796338,
+        "upper_1sigma": 138654735.50522324
+      },
+      "reservoir.m": {
+        "sigma_transformed": 0.36780965157754403,
+        "transform": "log",
+        "lower_1sigma": 0.3781402527324377,
+        "upper_1sigma": 0.7890932243465424
+      }
+    },
+    "initial_parameters": {
+      "reservoir.N_stb": 160000000.0,
+      "reservoir.m": 0.9
+    },
+    "matched_parameters": {
+      "reservoir.N_stb": 107588993.55278005,
+      "reservoir.m": 0.5462489462542292
+    },
+    "parameter_changes": {
+      "reservoir.N_stb": {
+        "initial": 160000000.0,
+        "matched": 107588993.55278005,
+        "ratio": 0.6724312097048752,
+        "change_percent": -32.75687902951247
+      },
+      "reservoir.m": {
+        "initial": 0.9,
+        "matched": 0.5462489462542292,
+        "ratio": 0.6069432736158101,
+        "change_percent": -39.30567263841899
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [2400, 3330] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "oil_water_drive_fetkovich",
+    "success": true,
+    "initial_rmse_psia": 149.96431743534296,
+    "rmse_psia": 5.793392390116744,
+    "weighted_rmse": 0.28966961950583714,
+    "improvement_percent": 96.13681941864967,
+    "nfev": 7,
+    "message": "`ftol` termination condition is satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.N_stb": {
+        "sigma_transformed": 0.0037998356114206894,
+        "transform": "log",
+        "lower_1sigma": 302441484.1214488,
+        "upper_1sigma": 304748695.8859381
+      }
+    },
+    "initial_parameters": {
+      "reservoir.N_stb": 240000000.0
+    },
+    "matched_parameters": {
+      "reservoir.N_stb": 303592898.2499742
+    },
+    "parameter_changes": {
+      "reservoir.N_stb": {
+        "initial": 240000000.0,
+        "matched": 303592898.2499742,
+        "ratio": 1.2649704093748924,
+        "change_percent": 26.49704093748925
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [1440, 2740] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "oil_water_drive_hve",
+    "success": true,
+    "initial_rmse_psia": 176.8910852215257,
+    "rmse_psia": 0.4373410892390631,
+    "weighted_rmse": 0.021867054461953153,
+    "improvement_percent": 99.75276250428824,
+    "nfev": 8,
+    "message": "`gtol` termination condition is satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.N_stb": {
+        "sigma_transformed": 0.00028911561771283905,
+        "transform": "log",
+        "lower_1sigma": 311556860.3675981,
+        "upper_1sigma": 311737064.3706436
+      }
+    },
+    "initial_parameters": {
+      "reservoir.N_stb": 240000000.0
+    },
+    "matched_parameters": {
+      "reservoir.N_stb": 311646949.3441731
+    },
+    "parameter_changes": {
+      "reservoir.N_stb": {
+        "initial": 240000000.0,
+        "matched": 311646949.3441731,
+        "ratio": 1.2985289556007211,
+        "change_percent": 29.852895560072113
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [1440, 2740] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "volatile_oil",
+    "success": true,
+    "initial_rmse_psia": 640.430339834825,
+    "rmse_psia": 5.191388948624413,
+    "weighted_rmse": 0.2595694474312206,
+    "improvement_percent": 99.1893905354385,
+    "nfev": 6,
+    "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.N_stb": {
+        "sigma_transformed": 0.000586187983670047,
+        "transform": "log",
+        "lower_1sigma": 9989575.268687155,
+        "upper_1sigma": 10001293.674502593
+      }
+    },
+    "initial_parameters": {
+      "reservoir.N_stb": 15000000.0
+    },
+    "matched_parameters": {
+      "reservoir.N_stb": 9995432.754297754
+    },
+    "parameter_changes": {
+      "reservoir.N_stb": {
+        "initial": 15000000.0,
+        "matched": 9995432.754297754,
+        "ratio": 0.6663621836198502,
+        "change_percent": -33.36378163801498
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": [
+      "Solved pressure leaves the PVT table [598, 4998] psia at 1 step(s); properties were extrapolated"
+    ]
+  },
+  {
+    "case": "wet_gas",
+    "success": true,
+    "initial_rmse_psia": 1178.2412561786632,
+    "rmse_psia": 6.614574335905815e-07,
+    "weighted_rmse": 2.6458297343623264e-08,
+    "improvement_percent": 99.9999999438606,
+    "nfev": 9,
+    "message": "`xtol` termination condition is satisfied.",
+    "warnings": [],
+    "parameter_correlation": {},
+    "parameter_uncertainty": {
+      "reservoir.G_scf": {
+        "sigma_transformed": 3.8536925957932644e-11,
+        "transform": "log",
+        "lower_1sigma": 69479999994.5935,
+        "upper_1sigma": 69479999999.94852
+      }
+    },
+    "initial_parameters": {
+      "reservoir.G_scf": 100000000000.0
+    },
+    "matched_parameters": {
+      "reservoir.G_scf": 69479999997.27101
+    },
+    "parameter_changes": {
+      "reservoir.G_scf": {
+        "initial": 100000000000.0,
+        "matched": 69479999997.27101,
+        "ratio": 0.6947999999727101,
+        "change_percent": -30.520000002728988
+      }
+    },
+    "failed_trials": [],
+    "simulation_warnings": []
+  }
+]

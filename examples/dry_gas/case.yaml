@@ -1,0 +1,29 @@
+project:
+  name: Dry gas depletion
+reservoir:
+  type: dry_gas
+  Pi_psia: 1798
+  T_degF: 164
+  G_scf: 8000000000.0
+  Swi: 0.52
+  cf_1psi: 3.0e-06
+  cw_1psi: 0
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: none
+solver:
+  min_pressure_psia: 500
+  max_pressure_psia: 2200
+history_match:
+  pressure_sigma_psia: 5
+  loss: linear
+  parameters:
+    reservoir.G_scf:
+    - 5000000000.0
+    - 30000000000.0

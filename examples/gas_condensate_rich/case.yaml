@@ -1,0 +1,29 @@
+project:
+  name: Walsh rich gas-condensate depletion
+reservoir:
+  type: gas_condensate
+  Pi_psia: 5800
+  Pd_psia: 5430
+  G_scf: 16000000000.0
+  Swi: 0.0
+  cf_1psi: 0.0
+  cw_1psi: 0.0
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: none
+solver:
+  min_pressure_psia: 500
+  max_pressure_psia: 6800
+history_match:
+  pressure_sigma_psia: 20
+  loss: linear
+  parameters:
+    reservoir.G_scf:
+    - 3000000000.0
+    - 20000000000.0

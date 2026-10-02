@@ -1,0 +1,40 @@
+project:
+  name: Oil water drive - HVE
+reservoir:
+  type: black_oil
+  Pi_psia: 2740
+  Pb_psia: 2740
+  Rsi_scf_stb: 650
+  N_stb: 240000000.0
+  m: 0
+  Swi: 0.05
+  cf_1psi: 0
+  cw_1psi: 0
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: hve
+  k_md: 200
+  phi: 0.25
+  ct_1psi: 7.0e-06
+  muw_cp: 0.55
+  h_ft: 100
+  ri_ft: 9200
+  re_ri: 5
+  angle_deg: 140
+solver:
+  min_pressure_psia: 500
+  max_pressure_psia: 3500
+  max_step_days: 0
+history_match:
+  pressure_sigma_psia: 20
+  loss: linear
+  parameters:
+    reservoir.N_stb:
+    - 100000000.0
+    - 500000000.0

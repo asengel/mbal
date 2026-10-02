@@ -1,0 +1,34 @@
+project:
+  name: Oil reservoir with initial gas cap
+reservoir:
+  type: black_oil
+  Pi_psia: 3330
+  Pb_psia: 3330
+  Rsi_scf_stb: 510
+  N_stb: 160000000.0
+  m: 0.9
+  Swi: 0.2
+  cw_1psi: 2.0e-06
+  cf_1psi: 0
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: none
+solver:
+  min_pressure_psia: 1000
+  max_pressure_psia: 4000
+history_match:
+  pressure_sigma_psia: 20
+  loss: linear
+  parameters:
+    reservoir.N_stb:
+    - 50000000.0
+    - 300000000.0
+    reservoir.m:
+    - 0.01
+    - 1.5

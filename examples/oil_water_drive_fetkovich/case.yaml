@@ -1,0 +1,34 @@
+project:
+  name: Dake oil water drive - Fetkovich
+reservoir:
+  type: black_oil
+  Pi_psia: 2740
+  Pb_psia: 2740
+  Rsi_scf_stb: 650
+  N_stb: 240000000.0       # deliberately offset history-match initial guess
+  m: 0
+  Swi: 0.05
+  cf_1psi: 0
+  cw_1psi: 0
+  Bw_rb_stb: 1.0
+pvt:
+  file: pvt.csv
+  interpolation:
+    extrapolation: linear
+history:
+  file: history.csv
+aquifer:
+  model: fetkovich
+  J_rb_day_psi: 116.5      # Dake Exercise 9.3, reD = 5
+  Wei_rb: 211900000.0      # Dake Exercise 9.3, reD = 5
+solver:
+  min_pressure_psia: 500
+  max_pressure_psia: 3500
+  max_step_days: 0         # reproduce Dake's annual report-date calculation
+history_match:
+  pressure_sigma_psia: 20
+  loss: linear
+  parameters:
+    reservoir.N_stb:
+    - 100000000.0
+    - 500000000.0

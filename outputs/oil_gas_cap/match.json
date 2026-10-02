@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "initial_rmse_psia": 276.95374745947225,
+  "rmse_psia": 4.145552285239935,
+  "weighted_rmse": 0.20727761426199673,
+  "improvement_percent": 98.50316079010753,
+  "nfev": 13,
+  "message": "`ftol` termination condition is satisfied.",
+  "warnings": [
+    "Strong fitted-parameter correlation: reservoir.N_stb / reservoir.m (-1.000). The pressure match may not uniquely identify these parameters."
+  ],
+  "parameter_correlation": {
+    "reservoir.N_stb": {
+      "reservoir.N_stb": 1.0,
+      "reservoir.m": -0.9998883003918492
+    },
+    "reservoir.m": {
+      "reservoir.N_stb": -0.9998883003918491,
+      "reservoir.m": 1.0
+    }
+  },
+  "parameter_uncertainty": {
+    "reservoir.N_stb": {
+      "sigma_transformed": 0.2536685737676958,
+      "transform": "log",
+      "lower_1sigma": 83483564.34796338,
+      "upper_1sigma": 138654735.50522324
+    },
+    "reservoir.m": {
+      "sigma_transformed": 0.36780965157754403,
+      "transform": "log",
+      "lower_1sigma": 0.3781402527324377,
+      "upper_1sigma": 0.7890932243465424
+    }
+  },
+  "initial_parameters": {
+    "reservoir.N_stb": 160000000.0,
+    "reservoir.m": 0.9
+  },
+  "matched_parameters": {
+    "reservoir.N_stb": 107588993.55278005,
+    "reservoir.m": 0.5462489462542292
+  },
+  "parameter_changes": {
+    "reservoir.N_stb": {
+      "initial": 160000000.0,
+      "matched": 107588993.55278005,
+      "ratio": 0.6724312097048752,
+      "change_percent": -32.75687902951247
+    },
+    "reservoir.m": {
+      "initial": 0.9,
+      "matched": 0.5462489462542292,
+      "ratio": 0.6069432736158101,
+      "change_percent": -39.30567263841899
+    }
+  },
+  "failed_trials": []
+}
