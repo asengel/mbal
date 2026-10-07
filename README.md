@@ -50,9 +50,9 @@ Ahmed, T. (2010). Reservoir Engineering Handbook (4th ed.). Gulf Professional Pu
 
 Dake, L. P. (1978). Fundamentals of Reservoir Engineering. Elsevier.
 
-Walsh, M. P. (1995). A generalized approach to reservoir material balance calculations. Journal of Canadian Petroleum Technology, 34(1), 55–63. https://doi.org/10.2118/95-01-05
+Walsh, M. P. (1995). A generalized approach to reservoir material balance calculations. Journal of Canadian Petroleum Technology.
 
-Walsh, M. P., Ansah, J., & Raghavan, R. (1994). The new, generalized material balance as an equation of a straight line: Part 1 – Applications to undersaturated, volumetric reservoirs (SPE Paper 27684). Society of Petroleum Engineers. https://doi.org/10.2118/27684-MS
+Walsh, M. P., Ansah, J., & Raghavan, R. (1994). The new, generalized material balance as an equation of a straight line: Part 1 – Applications to undersaturated, volumetric reservoirs. Society of Petroleum Engineers.
 
 Walsh, M. P., & Lake, L. W. (2003). A generalized approach to primary hydrocarbon recovery. Elsevier.
 
